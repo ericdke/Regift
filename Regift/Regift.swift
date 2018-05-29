@@ -275,7 +275,7 @@ public struct Regift {
     */
     public func createGIFForTimePoints(_ timePoints: [TimePoint], fileProperties: [String: AnyObject], frameProperties: [String: AnyObject], frameCount: Int, size: CGSize? = nil) throws -> URL {
         // Ensure the source media is a valid file.
-        guard asset.tracks(withMediaCharacteristic: .visual).count > 0 else {
+        guard asset.tracks(withMediaCharacteristic: AVMediaCharacteristicVisual).count > 0 else {
             throw RegiftError.SourceFormatInvalid
         }
 
