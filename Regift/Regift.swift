@@ -319,7 +319,6 @@ public struct Regift {
             guard let imageRef = image , error == nil else {
                 print("An error occurred: \(String(describing: error)), image is \(String(describing: image))")
                 dispatchError = true
-                gifGroup.leave()
                 return
             }
 
